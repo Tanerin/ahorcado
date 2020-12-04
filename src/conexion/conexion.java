@@ -19,7 +19,7 @@ public class conexion {
     public conexion (){
           try{
               Class.forName("com.mysql.jdbc.Driver");
-              con=DriverManager.getConnection("jdbc:mysql://189.141.43.72:3306/ahorcado","anonimo","YoJuegoLoL14.13");
+              con=DriverManager.getConnection("jdbc:mysql://189.141.27.152:3306/ahorcado","anonimo","YoJuegoLoL14.13");
     }catch (Exception e){
        System.err.println("Error:"+e);
     } 

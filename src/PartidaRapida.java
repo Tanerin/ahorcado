@@ -17,9 +17,11 @@ import java.util.Random;
  */
 
 public class PartidaRapida extends javax.swing.JFrame {
-public int palabraper=0;
+public int palabraper;
+public int unica;
 public String campoactivo="todo";
 public String palabrac;
+
     /**
      * Creates new form PartidaRapida
      */
@@ -74,7 +76,7 @@ public String palabrac;
                 break;
             case "todo":
                 palabrat();
-                System.out.println(palabra);
+                //System.out.println(palabra);
                 break;
         }
         letras=palabra.length();
@@ -96,9 +98,11 @@ String palabra;
 int letras;
 int aciertos;
 int errores=0;
-public int intentosf=1;
-int aciertosp=0;
+public int intentosf;
+int aciertosp=0; 
 int rachavic=0;
+String palabras [][] ;
+
     private  void palabrat(){
         Random rand = new Random();
         int limite=10;
@@ -109,7 +113,7 @@ int rachavic=0;
                 rs.next();
                 limite=rs.getInt("id");
             } catch (SQLException ex) {
-                
+             offlineword();
             }
         aleatorio = rand.nextInt(limite);
         palabra="";
@@ -120,7 +124,7 @@ int rachavic=0;
                 palabra=rs.getString("palabra");
                 pista=rs.getString("pista");
             } catch (SQLException ex) {
-                
+             offlineword();  
             }
        
     }
@@ -433,7 +437,7 @@ for(int i=0;i<letras;i++){
         //System.out.println("XD");
         aciertos++;
         aciertosp++;
-      
+    
     switch(i){
         case 0:
             lblLetra1.setText(intento);
@@ -578,7 +582,55 @@ private void wingame() {
     rachavic++;
 }
 }
-
+private void offlineword(){
+Random rand = new Random();
+palabras[0][0]="Perro";
+palabras[1][0]="Mejor amigo";
+palabras[0][1]="Tortuga";
+palabras[1][1]="Lento";
+palabras[0][2]="Gallina";
+palabras[1][2]="Plumas";
+palabras[0][3]="Hamburguesa";
+palabras[1][3]="Comida rapida";
+palabras[0][4]="Carbon";
+palabras[1][4]="Combustible";
+palabras[0][5]="Pluma";
+palabras[1][5]="Usa Tinta";
+palabras[0][6]="Lápiz";
+palabras[1][6]="Útil para escribir";
+palabras[0][7]="Celular";
+palabras[1][7]="Siempre a la mano";
+palabras[0][8]="Cubeta";
+palabras[1][8]="Almacena agua";
+palabras[0][9]="Leer";
+palabras[1][9]="Nutrir la mente";
+palabras[0][10]="Bocina";
+palabras[1][10]="Escuchar música";
+palabras[0][11]="Pulsera";
+palabras[1][11]="Adorna tu mano";
+palabras[0][12]="Collar";
+palabras[1][12]="Adorna tu cuello";
+palabras[0][13]="Calcetines";
+palabras[1][13]="Calienta tus pies";
+palabras[0][14]="Tabla";
+palabras[1][14]="Derivado de la madera";
+palabras[0][15]="Instagram";
+palabras[1][15]="Red Social de fotos";
+palabras[0][16]="Cuaderno";
+palabras[1][16]="Escribes en él";
+palabras[0][17]="Vela";
+palabras[1][17]="Te da luz suave";
+palabras[0][18]="Tijeras";
+palabras[1][18]="Cortar";
+palabras[0][19]="Guitarra";
+palabras[1][19]="Instrumento musical de cuerdas";
+palabras[0][20]="Carro";
+palabras[1][20]="Un medio de transporte muy comun";
+int limite=10;
+aleatorio = rand.nextInt(limite);
+palabra=palabras[0][aleatorio];
+pista=palabras[1][aleatorio];
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -868,6 +920,11 @@ private void wingame() {
         lblLetra10.setText(null);
         lblLetra11.setText(null);
         lblLetra12.setText(null);
+        if(unica==1){
+        MenuPrincipal partidarapida=new MenuPrincipal();
+        partidarapida.setVisible(true);
+        this.setVisible(false);
+        }else{
         if(palabraper==1){
         palabra=palabrac;
         }
@@ -905,6 +962,7 @@ private void wingame() {
         lblPista.setText(pista);
         errores=0;
         aciertos=0;
+        }
         }
     }//GEN-LAST:event_BtnSiguienteMouseClicked
 

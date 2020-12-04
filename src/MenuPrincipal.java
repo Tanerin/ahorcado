@@ -38,7 +38,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnLogros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tema neon/Plantillas/menuprincipal/btnLogros.png"))); // NOI18N
@@ -60,6 +59,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         btnUnica.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tema neon/Plantillas/menuprincipal/BtnUnica.png"))); // NOI18N
         btnUnica.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnUnicaMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnUnicaMouseEntered(evt);
             }
@@ -79,6 +81,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         btnCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tema neon/Plantillas/menuprincipal/Cerrar.png"))); // NOI18N
         btnCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnCerrarMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnCerrarMouseEntered(evt);
             }
@@ -125,6 +130,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
         PartidaRapida partidarapida=new PartidaRapida();
         partidarapida.setVisible(true);
         this.setVisible(false);
+        partidarapida.unica=0;
+        partidarapida.intentosf=6;
     }//GEN-LAST:event_btnRapidaMouseClicked
 
     private void btnCerrarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCerrarMouseEntered
@@ -137,6 +144,18 @@ public class MenuPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
          lblMensaje.setText("Bienvenido! Selecciona un modo de juego");
     }//GEN-LAST:event_btnCerrarMouseExited
+
+    private void btnCerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCerrarMouseClicked
+        // TODO add your handling code here:\
+        this.dispose();
+    }//GEN-LAST:event_btnCerrarMouseClicked
+
+    private void btnUnicaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUnicaMouseClicked
+        // TODO add your handling code here:
+        PartidaCustom partidaunica=new PartidaCustom();
+        partidaunica.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnUnicaMouseClicked
 
     /**
      * @param args the command line arguments

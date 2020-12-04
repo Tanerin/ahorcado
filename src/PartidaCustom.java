@@ -15,6 +15,12 @@ public class PartidaCustom extends javax.swing.JFrame {
      */
     public PartidaCustom() {
         initComponents();
+        btnFacil.setVisible(false);
+        btnHardcore.setVisible(false);
+        btnNormla.setVisible(false);
+        btnPsSi.setVisible(false);
+        btnPsNo.setVisible(false);
+        
     }
 
     /**
@@ -26,30 +32,280 @@ public class PartidaCustom extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        txtFPalabras = new javax.swing.JTextField();
+        btnPsNo = new javax.swing.JLabel();
+        btnFacil = new javax.swing.JLabel();
+        btnNormla = new javax.swing.JLabel();
+        btnPsSi = new javax.swing.JLabel();
+        btnHardcore = new javax.swing.JLabel();
+        txtpalabra = new javax.swing.JLabel();
+        crHardcore = new javax.swing.JLabel();
+        crNormal = new javax.swing.JLabel();
+        crFacil = new javax.swing.JLabel();
+        crNo = new javax.swing.JLabel();
+        crSi = new javax.swing.JLabel();
+        TxtIntentos = new javax.swing.JLabel();
+        BtnRegresar = new javax.swing.JLabel();
+        BtnJugar = new javax.swing.JLabel();
+        PalabrasCustom = new javax.swing.JLabel();
+        Intentos = new javax.swing.JLabel();
+        Dificultad = new javax.swing.JLabel();
+        TitleBar = new javax.swing.JLabel();
         Plantilla = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txtFPalabras.setBackground(new java.awt.Color(255, 137, 41));
+        txtFPalabras.setBorder(null);
+        getContentPane().add(txtFPalabras, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 247, 160, 40));
+
+        btnPsNo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tema neon/Plantillas/ConfigPartida/Select.png"))); // NOI18N
+        btnPsNo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnPsNoMouseClicked(evt);
+            }
+        });
+        getContentPane().add(btnPsNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(509, 249, -1, -1));
+
+        btnFacil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tema neon/Plantillas/ConfigPartida/Select.png"))); // NOI18N
+        btnFacil.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnFacilMouseClicked(evt);
+            }
+        });
+        getContentPane().add(btnFacil, new org.netbeans.lib.awtextra.AbsoluteConstraints(363, 434, -1, -1));
+
+        btnNormla.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tema neon/Plantillas/ConfigPartida/Select.png"))); // NOI18N
+        btnNormla.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnNormlaMouseClicked(evt);
+            }
+        });
+        getContentPane().add(btnNormla, new org.netbeans.lib.awtextra.AbsoluteConstraints(509, 434, -1, -1));
+
+        btnPsSi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tema neon/Plantillas/ConfigPartida/Select.png"))); // NOI18N
+        btnPsSi.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnPsSiMouseClicked(evt);
+            }
+        });
+        getContentPane().add(btnPsSi, new org.netbeans.lib.awtextra.AbsoluteConstraints(361, 249, -1, -1));
+
+        btnHardcore.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tema neon/Plantillas/ConfigPartida/Select.png"))); // NOI18N
+        btnHardcore.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnHardcoreMouseClicked(evt);
+            }
+        });
+        getContentPane().add(btnHardcore, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 434, -1, -1));
+
+        txtpalabra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tema neon/Plantillas/ConfigPartida/txtBox.png"))); // NOI18N
+        getContentPane().add(txtpalabra, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 242, -1, -1));
+
+        crHardcore.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tema neon/Plantillas/ConfigPartida/HardCore.png"))); // NOI18N
+        crHardcore.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                crHardcoreMouseClicked(evt);
+            }
+        });
+        getContentPane().add(crHardcore, new org.netbeans.lib.awtextra.AbsoluteConstraints(652, 426, -1, -1));
+
+        crNormal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tema neon/Plantillas/ConfigPartida/Normal.png"))); // NOI18N
+        crNormal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                crNormalMouseClicked(evt);
+            }
+        });
+        getContentPane().add(crNormal, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 426, -1, -1));
+
+        crFacil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tema neon/Plantillas/ConfigPartida/Facil.png"))); // NOI18N
+        crFacil.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                crFacilMouseClicked(evt);
+            }
+        });
+        getContentPane().add(crFacil, new org.netbeans.lib.awtextra.AbsoluteConstraints(355, 426, -1, -1));
+
+        crNo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tema neon/Plantillas/ConfigPartida/No.png"))); // NOI18N
+        crNo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                crNoMouseClicked(evt);
+            }
+        });
+        getContentPane().add(crNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 242, -1, -1));
+
+        crSi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tema neon/Plantillas/ConfigPartida/Si.png"))); // NOI18N
+        crSi.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                crSiMouseClicked(evt);
+            }
+        });
+        getContentPane().add(crSi, new org.netbeans.lib.awtextra.AbsoluteConstraints(353, 242, -1, -1));
+
+        TxtIntentos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tema neon/Plantillas/ConfigPartida/txtIntentos.png"))); // NOI18N
+        TxtIntentos.setEnabled(false);
+        getContentPane().add(TxtIntentos, new org.netbeans.lib.awtextra.AbsoluteConstraints(354, 335, -1, -1));
+
+        BtnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tema neon/Plantillas/ConfigPartida/Regresar.png"))); // NOI18N
+        BtnRegresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtnRegresarMouseClicked(evt);
+            }
+        });
+        getContentPane().add(BtnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 617, -1, -1));
+
+        BtnJugar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tema neon/Plantillas/ConfigPartida/Jugar.png"))); // NOI18N
+        BtnJugar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtnJugarMouseClicked(evt);
+            }
+        });
+        getContentPane().add(BtnJugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 620, -1, -1));
+
+        PalabrasCustom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tema neon/Plantillas/ConfigPartida/PalabraAleatoria.png"))); // NOI18N
+        getContentPane().add(PalabrasCustom, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 242, -1, -1));
+
+        Intentos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tema neon/Plantillas/ConfigPartida/Intentos.png"))); // NOI18N
+        getContentPane().add(Intentos, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 332, -1, -1));
+
+        Dificultad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tema neon/Plantillas/ConfigPartida/Dificultad.png"))); // NOI18N
+        getContentPane().add(Dificultad, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 425, -1, -1));
+
+        TitleBar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tema neon/Plantillas/ConfigPartida/TitleBar.png"))); // NOI18N
+        getContentPane().add(TitleBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         Plantilla.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tema neon/Plantillas/Personalizacion.png"))); // NOI18N
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Plantilla)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Plantilla)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        getContentPane().add(Plantilla, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+int prc;
+    private void btnPsSiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPsSiMouseClicked
+     
+        
+    }//GEN-LAST:event_btnPsSiMouseClicked
 
+    private void btnPsNoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPsNoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPsNoMouseClicked
+String dificultad;
+    private void btnFacilMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFacilMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnFacilMouseClicked
+
+    private void btnNormlaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNormlaMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnNormlaMouseClicked
+
+    private void btnHardcoreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHardcoreMouseClicked
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_btnHardcoreMouseClicked
+
+    private void BtnJugarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnJugarMouseClicked
+        // TODO add your handling code here:
+         PartidaRapida palabraper=new PartidaRapida();
+         PartidaRapida mostrar=new PartidaRapida();
+         palabraper.unica=1;
+         if (prc==1){
+           
+            palabraper.palabraper=1;
+            
+            if(!"Hard".equals(dificultad)){
+                
+                
+                }else{
+                switch (dificultad){
+                    case "Facil":
+                        palabraper.intentosf=12;
+                    break;
+                    case "Normal":
+                        palabraper.intentosf=6;
+                    break;
+                    case "Hard":
+                        palabraper.intentosf=1;
+                    break;
+                }
+                
+                }
+            mostrar.setVisible(true);
+            this.setVisible(false);
+            }else{
+                palabraper.palabraper=0;
+                
+                if(!"Hard".equals(dificultad)){
+                
+                    
+                
+                }else{
+                switch (dificultad){
+                    case "Facil":
+                        palabraper.intentosf=12;
+                    break;
+                    case "Normal":
+                        palabraper.intentosf=6;
+                    break;
+                    case "Hard":
+                        palabraper.intentosf=1;
+                    break;
+                }
+                
+        }
+        mostrar.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BtnJugarMouseClicked
+    }
+    private void crSiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crSiMouseClicked
+        // TODO add your handling code here:
+        btnPsSi.setVisible(true);
+        btnPsNo.setVisible(false);
+        
+        txtFPalabras.setVisible(false);
+        prc=0;
+    }//GEN-LAST:event_crSiMouseClicked
+
+    private void crNoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crNoMouseClicked
+        // TODO add your handling code here:
+        btnPsSi.setVisible(false);
+        btnPsNo.setVisible(true);
+        txtFPalabras.setVisible(true);
+        prc=1;
+    }//GEN-LAST:event_crNoMouseClicked
+
+    private void crFacilMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crFacilMouseClicked
+        // TODO add your handling code here:
+        btnFacil.setVisible(true);
+        btnNormla.setVisible(false);
+        btnHardcore.setVisible(false);
+        dificultad="Facil";
+    }//GEN-LAST:event_crFacilMouseClicked
+
+    private void crNormalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crNormalMouseClicked
+        // TODO add your handling code here:
+        btnFacil.setVisible(false);
+        btnNormla.setVisible(true);
+        btnHardcore.setVisible(false);
+        dificultad="Normal";
+    }//GEN-LAST:event_crNormalMouseClicked
+
+    private void crHardcoreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crHardcoreMouseClicked
+        // TODO add your handling code here:
+        btnFacil.setVisible(false);
+        btnNormla.setVisible(false);
+        btnHardcore.setVisible(true);
+        dificultad="Hard";
+    }//GEN-LAST:event_crHardcoreMouseClicked
+
+    private void BtnRegresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnRegresarMouseClicked
+        // TODO add your handling code here:
+        MenuPrincipal partidarapida=new MenuPrincipal();
+        partidarapida.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BtnRegresarMouseClicked
+    
     /**
      * @param args the command line arguments
      */
@@ -86,6 +342,25 @@ public class PartidaCustom extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel BtnJugar;
+    private javax.swing.JLabel BtnRegresar;
+    private javax.swing.JLabel Dificultad;
+    private javax.swing.JLabel Intentos;
+    private javax.swing.JLabel PalabrasCustom;
     private javax.swing.JLabel Plantilla;
+    private javax.swing.JLabel TitleBar;
+    private javax.swing.JLabel TxtIntentos;
+    private javax.swing.JLabel btnFacil;
+    private javax.swing.JLabel btnHardcore;
+    private javax.swing.JLabel btnNormla;
+    private javax.swing.JLabel btnPsNo;
+    private javax.swing.JLabel btnPsSi;
+    private javax.swing.JLabel crFacil;
+    private javax.swing.JLabel crHardcore;
+    private javax.swing.JLabel crNo;
+    private javax.swing.JLabel crNormal;
+    private javax.swing.JLabel crSi;
+    private javax.swing.JTextField txtFPalabras;
+    private javax.swing.JLabel txtpalabra;
     // End of variables declaration//GEN-END:variables
 }
